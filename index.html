@@ -1,0 +1,135 @@
+<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#eef6ea"><link rel="manifest" href="manifest.json"><link rel="icon" href="icon-192.png"><title>دستیار درمانگاه حیوانات خانگی دکتر بنایی</title>
+<style>@font-face{font-family:'Myriad Arabic';src:local('Myriad Arabic'),url(MyriadArabic-Regular.woff2),url(MyriadArabic-Regular.ttf);font-weight:400}
+@font-face{font-family:'Myriad Arabic';src:local('Myriad Arabic Bold'),url(MyriadArabic-Bold.woff2),url(MyriadArabic-Bold.ttf);font-weight:700}
+:root{--g:#14532d;--a:#0d9488;--bg:#f4f7f5;--t:#14231b;--m:#6b7c73}
+*{box-sizing:border-box;font-family:'Myriad Arabic',Tahoma,sans-serif;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--t);padding-bottom:96px;font-size:15px}
+#app{max-width:480px;margin:auto;padding:max(10px,env(safe-area-inset-top)) 16px 0}
+h2{font-size:22px;margin:14px 2px 8px}h3{font-size:16px;margin:14px 2px 6px}
+svg.i{stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}
+.bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.brand{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--g)}.brand img{width:30px;height:30px;border-radius:9px}
+.ib{position:relative;width:42px;height:42px;border-radius:14px;border:0;background:#fff;color:var(--g);box-shadow:0 1px 2px #10181408,0 6px 16px #1018140d;display:grid;place-items:center}
+.ib s{text-decoration:none;position:absolute;top:-4px;left:-4px;background:#e11d48;color:#fff;border-radius:9px;font-size:11px;min-width:18px;height:18px;line-height:18px;text-align:center}
+.hero{position:relative;overflow:hidden;color:#fff;border-radius:26px;padding:20px;background:linear-gradient(135deg,#14532d 0%,#0f766e 70%,#0d9488 100%);box-shadow:0 14px 30px #14532d33}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:#ffffff14}.hero:before{width:190px;height:190px;left:-60px;top:-70px}.hero:after{width:120px;height:120px;left:60px;bottom:-60px}
+.hero small{opacity:.85}.hero h1{margin:6px 0 2px;font-size:21px;line-height:1.5}.hero p{margin:0 0 14px;opacity:.8;font-size:13px}
+.hs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;position:relative}.hs div{background:#ffffff1f;backdrop-filter:blur(6px);border-radius:16px;padding:10px 4px;text-align:center;font-size:12px}.hs b{display:block;font-size:22px}
+.st{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}.st div{background:#fff;border-radius:18px;padding:12px 14px;box-shadow:0 1px 2px #10181408,0 6px 16px #1018140a;font-size:13px;color:var(--m)}.st b{font-size:24px;color:var(--g);display:block}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.tile{border:0;background:#fff;border-radius:22px;padding:14px 4px 12px;text-align:center;box-shadow:0 1px 2px #10181408,0 8px 20px #1018140c;transition:transform .15s}.tile:active{transform:scale(.96)}
+.tile .bb{width:48px;height:48px;border-radius:16px;margin:0 auto 8px;display:grid;place-items:center}.tile b{display:block;font-size:14px}.tile small{font-size:11px;color:var(--m)}
+.card{background:#fff;border-radius:20px;padding:14px;margin:10px 0;box-shadow:0 1px 2px #10181408,0 6px 18px #1018140a;line-height:1.8}
+.nav{position:fixed;bottom:max(12px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);width:min(440px,calc(100% - 28px));background:#ffffffe6;backdrop-filter:blur(14px);display:flex;justify-content:space-around;padding:8px 6px;border-radius:26px;box-shadow:0 10px 30px #14231b26;z-index:5}
+.nav button{background:0;border:0;color:#8a9a91;font-size:11px;padding:6px 12px;border-radius:18px}.nav button i{display:block;font-style:normal;height:24px}.nav .on{color:var(--g);background:#e4f2ea;font-weight:700}
+button.p{background:linear-gradient(135deg,#14532d,#0d9488);color:#fff;border:0;border-radius:16px;padding:13px 16px;font-size:15px;font-weight:700;box-shadow:0 8px 18px #0d94882e}
+button.s{background:#edf4ef;color:var(--g);border:0;border-radius:12px;padding:7px 11px;margin:4px 0 0 4px;font-size:13px}button.d{background:#fdecee;color:#be123c}
+input,select,textarea{width:100%;padding:11px 12px;border:1.5px solid #e1e8e3;border-radius:14px;font-size:15px;background:#fbfcfb;color:var(--t)}input:focus,select:focus,textarea:focus{outline:0;border-color:var(--a)}textarea{min-height:68px}
+label{display:block;margin:11px 2px 4px;font-size:13px;color:var(--m)}
+.ov{position:fixed;inset:0;background:#0b1a1280;backdrop-filter:blur(3px);display:none;z-index:50;overflow:auto}.ov.on{display:block}.bx{background:#fff;margin:24px auto;width:calc(100% - 24px);max-width:460px;border-radius:24px;padding:16px}
+.df{display:flex;gap:6px}.df button{border:0;background:#edf4ef;color:var(--g);border-radius:14px;padding:0 14px}.df3{display:grid;grid-template-columns:1.2fr 1.4fr 1fr;gap:6px}
+.pill{display:inline-block;background:#e4f2ea;color:var(--g);border-radius:20px;padding:1px 10px;font-size:12px;margin-left:5px}.red{color:#be123c}
+.pic{width:68px;height:68px;border-radius:20px;object-fit:cover;float:left;margin-right:8px}.rxr{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:4px;margin:4px 0}.rxr input{padding:7px;font-size:13px}
+@media print{.nav,.bar,button,.noprint{display:none!important}body{background:#fff}}
+</style></head><body><div id="app"></div>
+<div class="nav"><button onclick="go('set')" id="n_set"><i data-i="settings"></i>تنظیمات</button><button onclick="pform()"><i data-i="plus"></i>پرونده جدید</button><button onclick="go('pets')" id="n_pets"><i data-i="users"></i>بیماران</button><button onclick="go('home')" id="n_home" class="on"><i data-i="home"></i>خانه</button></div>
+<div id="md" class="ov"></div><div id="pk" class="ov" style="z-index:60"></div>
+<script>
+const IC={home:'<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>',users:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17" cy="9" r="2.6"/><path d="M17 14c2.8 0 4.5 1.8 4.5 4.5"/>',plus:'<circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/>',settings:'<path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/>',bell:'<path d="M6 16v-5a6 6 0 0112 0v5l1.5 2h-15z"/><path d="M10 21h4"/>',menu:'<path d="M4 7h16M4 12h16M4 17h16"/>',syringe:'<path d="M17 3l4 4"/><path d="M19 5l-3 3"/><path d="M14 6l4 4-9.5 9.5H4.5v-4z"/><path d="M11 9l4 4M3 21l3-3"/>',visit:'<path d="M6 3v6a4 4 0 008 0V3"/><path d="M10 13v3a5 5 0 0010 0v-3"/><circle cx="20" cy="11" r="2"/>',paw:'<circle cx="7" cy="10" r="2"/><circle cx="12" cy="6.5" r="2"/><circle cx="17" cy="10" r="2"/><path d="M12 12c-3 0-5.5 3-5.5 5.2 0 1.6 1.4 2.3 2.8 2 1-.2 1.8-.6 2.7-.6s1.7.4 2.7.6c1.4.3 2.8-.4 2.8-2C17.5 15 15 12 12 12z"/>',heart:'<path d="M20.4 5.6a5 5 0 00-7.1 0L12 7l-1.3-1.4a5 5 0 00-7.1 7.1L12 21l8.4-8.3a5 5 0 000-7.1z"/><path d="M3.5 12h5l1.5-3 3 6 1.5-3h5.5"/>',pill:'<rect x="2.5" y="8.5" width="19" height="7" rx="3.5" transform="rotate(-45 12 12)"/><path d="M9 9l6 6"/>',file:'<path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/>',wallet:'<path d="M3 7a2 2 0 012-2h13v4"/><path d="M3 7v11a2 2 0 002 2h15V9H5a2 2 0 01-2-2z"/><circle cx="16.5" cy="14.5" r="1"/>',flask:'<path d="M9 3h6M10 3v6l-5.5 9.5A1.5 1.5 0 005.8 21h12.4a1.5 1.5 0 001.3-2.5L14 9V3"/><path d="M7.5 15h9"/>',phone:'<path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/>',msg:'<path d="M4 5h16v11H9l-5 4z"/>',check:'<path d="M4 12.5l5 5L20 6.5"/>',cal:'<rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17"/>',print:'<path d="M7 8V3h10v5"/><rect x="4" y="8" width="16" height="9" rx="2"/><path d="M7 14h10v7H7z"/>',back:'<path d="M9 5l7 7-7 7"/>'};
+const I=(n,z=22)=>`<svg class=i width=${z} height=${z} viewBox="0 0 24 24">${IC[n]}</svg>`;
+document.querySelectorAll('.nav i').forEach(e=>e.innerHTML=I(e.dataset.i));
+const $=s=>document.querySelector(s),FA='۰۱۲۳۴۵۶۷۸۹';
+const fa=s=>String(s).replace(/\d/g,d=>FA[d]),en=s=>String(s||'').replace(/[۰-۹]/g,d=>FA.indexOf(d)).replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d));
+const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+function g2j(gy,gm,gd){const m=[0,31,59,90,120,151,181,212,243,273,304,334];let jy;if(gy>1600){jy=979;gy-=1600}else{jy=0;gy-=621}
+const g2=gm>2?gy+1:gy;let d=365*gy+~~((g2+3)/4)-~~((g2+99)/100)+~~((g2+399)/400)-80+gd+m[gm-1];jy+=33*~~(d/12053);d%=12053;jy+=4*~~(d/1461);d%=1461;
+if(d>365){jy+=~~((d-1)/365);d=(d-1)%365}const jm=d<186?1+~~(d/31):7+~~((d-186)/30),jd=1+(d<186?d%31:(d-186)%30);return[jy,jm,jd]}
+function j2g(jy,jm,jd){let gy;if(jy>979){gy=1600;jy-=979}else gy=621;let d=365*jy+~~(jy/33)*8+~~((jy%33+3)/4)+78+jd+(jm<7?(jm-1)*31:(jm-7)*30+186);
+gy+=400*~~(d/146097);d%=146097;if(d>36524){gy+=100*~~(--d/36524);d%=36524;if(d>=365)d++}gy+=4*~~(d/1461);d%=1461;if(d>365){gy+=~~((d-1)/365);d=(d-1)%365}
+let gd=d+1;const s=[0,31,(gy%4==0&&gy%100!=0)||gy%400==0?29:28,31,30,31,30,31,31,30,31,30,31];let gm;for(gm=0;gm<13;gm++){if(gd<=s[gm])break;gd-=s[gm]}return[gy,gm,gd]}
+const pad=n=>String(n).padStart(2,'0'),jf=a=>a[0]+'/'+pad(a[1])+'/'+pad(a[2]);
+const ND=new Date(),TJ=jf(g2j(ND.getFullYear(),ND.getMonth()+1,ND.getDate()));
+const pj=s=>{const a=en(s).trim().split(/[\/\-.]/).map(Number);return a.length==3&&a.every(x=>x>0)?a:null};
+const dn=s=>{const a=pj(s);if(!a)return null;const g=j2g(...a);return Date.UTC(g[0],g[1]-1,g[2])/864e5},TN=dn(TJ),D=s=>s?fa(s):'—';
+const MN='فروردین اردیبهشت خرداد تیر مرداد شهریور مهر آبان آذر دی بهمن اسفند'.split(' '),WD='یکشنبه دوشنبه سه‌شنبه چهارشنبه پنجشنبه جمعه شنبه'.split(' ');
+function age(b){const a=pj(b),t=pj(TJ);if(!a)return'—';const m=(t[0]-a[0])*12+t[1]-a[1]-(t[2]<a[2]?1:0);if(m<0)return'—';return fa(~~(m/12)+' سال و '+m%12+' ماه')+' ('+fa(m)+' ماه)'}
+const W=g=>g?fa(g)+' گرم ('+fa((g/1000).toFixed(2).replace(/\.?0+$/,''))+' کیلوگرم)':'—';
+const DEF=['سلام {owner} عزیز 🐾 زمان {kind} {pet} در تاریخ {date} فرا رسیده. برای هماهنگی با درمانگاه حیوانات خانگی دکتر بنایی تماس بگیرید. سلامت حیوانات، هدف ماست.','{owner} گرامی، یادآوری: {kind} {pet} تاریخ {date}. پیشگیری بهتر از درمان است! درمانگاه حیوانات خانگی دکتر بنایی در کنار شماست.','سلام! {pet} عزیز منتظر {kind} در {date} است 🐶🐱 درمانگاه حیوانات خانگی دکتر بنایی؛ مراقبت از عزیزان چهارپا و پردار شما.','{owner} جان، فراموش نکنید: {kind} {pet} در {date}. واکسن و انگل‌زدایی منظم، یعنی حیوان سالم‌تر. درمانگاه دکتر بنایی'];
+let db={o:[],p:[],r:[],tpl:DEF,ti:0};try{Object.assign(db,JSON.parse(localStorage.clinic||'{}'))}catch(e){}
+const save=()=>{try{localStorage.clinic=JSON.stringify(db)}catch(e){alert('حافظه پر است؛ از تنظیمات پشتیبان بگیرید')}},uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,5);
+const VK=['هاری','پلی‌والان (سه‌گانه/۵گانه/۷گانه)','سه‌گانه گربه','لوسمی گربه','کفگیری/سگ‌خانگی','سایر'];
+const T={visit:{n:'ویزیت',f:[['hist','شرح حال','t'],['exam','معاینه','t'],['dx','تشخیص','t'],['fu','یادداشت و نتیجه پیگیری','t'],['next','تاریخ ویزیت مجدد','d']]},
+vaccine:{n:'واکسن',f:[['kind','نوع واکسن','s',VK],['next','تاریخ نوبت بعدی','d'],['note','توضیحات (سری ساخت و ...)','i']]},
+deworm:{n:'انگل‌زدایی',f:[['kind','نوع','s',['داخلی','خارجی','داخلی و خارجی']],['drug','داروی تجویز شده','i'],['dose','مشخصات / دوز','i'],['next','نوبت بعدی','d']]},
+surgery:{n:'جراحی',f:[['kind','نوع جراحی','i'],['anes','بیهوشی','t'],['post','مراقبت پس از عمل','t'],['drugs','درمان‌های دارویی تجویز شده','t'],['next','تاریخ پیگیری','d']]},
+lab:{n:'آزمایش / تصویربرداری',f:[['kind','نوع','s',['آزمایش خون','آزمایش ادرار','آزمایش مدفوع','رادیولوژی','سونوگرافی','سایر']],['res','نتیجه','t'],['img','عکس نتیجه (محل ذخیره)','img']]},
+rx:{n:'نسخه دارویی',f:[['items','اقلام دارو','rx'],['next','ویزیت مجدد / پایان دارو','d']]}};
+db.r=db.r.filter(x=>T[x.t]);
+const SP=['سگ','گربه','پرنده','خرگوش','همستر','سایر'],IM={};let V={v:'home'};
+function go(v,x){V=Object.assign({v},x);r();scrollTo(0,0)}
+function r(){const f={home,list,pets,pet,rem,set}[V.v];$('#app').innerHTML=f();document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('on',b.id=='n_'+V.v))}
+const pOf=id=>db.p.find(x=>x.id==id)||{},oOf=p=>db.o.find(x=>x.id==p.oid)||{};
+const active=x=>x.next&&!x.done&&x.t!='pay';
+function home(){const R=db.r,td=R.filter(x=>active(x)&&dn(x.next)==TN),od=R.filter(x=>active(x)&&dn(x.next)<TN),
+due=R.filter(x=>(x.t=='vaccine'||x.t=='deworm')&&active(x)&&dn(x.next)<=TN),md=R.filter(x=>(x.t=='rx'||x.t=='visit')&&active(x)&&dn(x.next)<=TN+1),
+vis=new Set(R.filter(x=>x.date==TJ).map(x=>x.pid)).size,wd=WD[ND.getDay()];
+const tl=[['vaccine','syringe','#ea580c','#fff1e6','واکسن','سوابق و یادآوری'],['visit','visit','#7c3aed','#f1ebff','ویزیت','مراجعات و پیگیری'],['pets','paw','#0d9488','#e0f5f1','بیماران','ثبت و جستجو'],['rem','bell','#2563eb','#e6eefd','یادآوری','واکسن و دارو'],['surgery','heart','#db2777','#fde8f2','جراحی','سوابق اقدامات'],['rx','pill','#e11d48','#fde8ec','داروها','نسخه و درمان'],['rep','file','#4f46e5','#ebebff','گزارش','پرونده‌ها'],['lab','flask','#0891b2','#e0f4f8','آزمایش‌ها','نتایج و سوابق']];
+return`<div class=bar><button class=ib onclick="go('set')">${I('menu')}</button><div class=brand><img src=icon-192.png onerror="this.style.display='none'">درمانگاه دکتر بنایی</div><button class=ib onclick="go('rem')">${I('bell')}${od.length+td.length?`<s>${fa(od.length+td.length)}</s>`:''}</button></div>
+<div class=hero><small>${wd}، ${fa(TJ)}</small><h1>دستیار درمانگاه<br>حیوانات خانگی دکتر بنایی</h1><p>سالم، شاد، در کنار شما</p><div class=hs><div><b>${fa(vis)}</b>مراجعان امروز</div><div><b>${fa(td.length)}</b>نوبت‌های امروز</div><div><b>${fa(od.length)}</b>پیگیری عقب‌افتاده</div></div></div>
+<div class=st><div onclick="go('rem')"><b>${fa(due.length)}</b>واکسن و انگل‌زدایی سررسید</div><div onclick="go('rem')"><b>${fa(md.length)}</b>یادآوری دارو و ویزیت</div></div>
+<button class=p style="width:100%" onclick="pform()">+ ثبت بیمار جدید</button>
+<div class=grid>${tl.map(t=>`<button class=tile onclick="${t[0]=='pets'?"go('pets')":t[0]=='rem'?"go('rem')":t[0]=='rep'?"go('pets',{rep:1})":`go('list',{t:'${t[0]}'})`}"><div class=bb style="background:${t[3]};color:${t[2]}">${I(t[1],26)}</div><b>${t[4]}</b><small>${t[5]}</small></button>`).join('')}</div>
+<p style="text-align:center;color:var(--m);margin:22px 0 6px;font-size:13px">سلامت حیوانات، هدف ماست</p>`}
+function pets(){const q=en(V.q||'').toLowerCase(),L=db.p.filter(p=>!q||(p.name+oOf(p).name+oOf(p).phone).toLowerCase().includes(q));
+return`<h2>${V.rep?'گزارش پرونده‌ها':'بیماران'}</h2><input placeholder="جستجوی نام حیوان، صاحب یا تلفن" value="${esc(V.q)}" oninput="V.q=this.value;r();const i=$('input');i.focus();i.setSelectionRange(99,99)">
+${L.map(p=>`<div class=card onclick="go('pet',{id:'${p.id}'})">${p.ph?`<img class=pic src="${p.ph}">`:''}<b>${esc(p.name)}</b> <span class=pill>${esc(p.sp)}</span><br>${esc(oOf(p).name)} · ${fa(oOf(p).phone||'')}<br><small>سن: ${age(p.birth)}</small></div>`).join('')||'<div class=card>موردی یافت نشد</div>'}`}
+function sumr(x){const t=T[x.t];if(x.t=='rx')return(x.items||[]).map(i=>`${esc(i.drug)} ${esc(i.dose)} ${esc(i.method)} ${esc(i.dur)}`).join('<br>');
+return t.f.filter(f=>f[0]!='next'&&f[2]!='img'&&x[f[0]]).map(f=>`<small>${f[1]}:</small> ${esc(x[f[0]])}`).join('<br>')+(x.img?`<br><img src="${x.img}" width=120>`:'')}
+function rcard(x,sh){const p=pOf(x.pid);return`<div class=card><b>${esc(p.name)}</b> <span class=pill>${T[x.t].n}</span> ${sh?'':''}<small>${D(x.date)}</small><br>${sumr(x)}${x.next?`<br>نوبت بعدی: <b class="${!x.done&&dn(x.next)<TN?'red':''}">${D(x.next)}</b>${x.done?' '+I('check',14):''}`:''}<div class=noprint>
+<button class=s onclick="openRec('${x.t}','${x.id}')">ویرایش</button><button class="s d" onclick="del('${x.id}')">حذف</button>${active(x)?`<button class=s onclick="sms('${x.id}')">${I('msg',15)} پیامک</button><button class=s onclick="tel('${x.pid}')">${I('phone',15)}</button><button class=s onclick="done('${x.id}')">${I('check',15)} انجام شد</button>`:''}</div></div>`}
+function list(){const L=db.r.filter(x=>x.t==V.t).sort((a,b)=>dn(b.date)-dn(a.date));return`<h2>${T[V.t].n}</h2><button class=p onclick="openRec('${V.t}')">+ ثبت جدید</button>${L.map(x=>rcard(x)).join('')||'<div class=card>هنوز ثبتی وجود ندارد</div>'}`}
+function pet(){const p=pOf(V.id),o=oOf(p),R=db.r.filter(x=>x.pid==p.id).sort((a,b)=>dn(b.date)-dn(a.date)),oth=db.p.filter(x=>x.oid==p.oid&&x.id!=p.id);
+return`<button class="s noprint" onclick="go('pets')">${I('back',15)} بازگشت</button><div class=card>${p.ph?`<img class=pic src="${p.ph}">`:''}<h3>${esc(p.name)} <span class=pill>${esc(p.sp)}</span></h3>صاحب: ${esc(o.name)} · ${fa(o.phone||'')}<br>نژاد: ${esc(p.breed)||'—'} · جنس: ${esc(p.sex)}<br>تاریخ تولد: ${D(p.birth)} · سن: ${age(p.birth)}<br>وزن: ${W(p.w)}<br>میکروچیپ: ${fa(p.chip||'—')}<br>حساسیت دارویی: <span class=red>${esc(p.alg)||'—'}</span><br>بیماری‌های زمینه‌ای: ${esc(p.dis)||'—'}
+${oth.length?`<br>سایر حیوانات این مشتری: ${oth.map(x=>`<a href=# onclick="go('pet',{id:'${x.id}'});return false">${esc(x.name)}</a>`).join('، ')}`:''}
+<div class=noprint><button class=s onclick="pform('${p.id}')">ویرایش</button><button class=s onclick="pform(0,'${p.oid}')">+ حیوان دیگر این مشتری</button><button class=s onclick="print()">${I('print',15)} چاپ</button><button class="s d" onclick="delp('${p.id}')">حذف پرونده</button><button class=s onclick="tel('${p.id}')">${I('phone',15)} تماس</button></div></div>
+<div class=noprint>${Object.keys(T).filter(k=>k!='pay').map(k=>`<button class=s onclick="openRec('${k}',0,'${p.id}')">+ ${T[k].n}</button>`).join('')}</div><h3>تمام مراجعات و سوابق</h3>${R.map(x=>rcard(x)).join('')||'<div class=card>سابقه‌ای ثبت نشده</div>'}`}
+function rem(){const A=db.r.filter(active).sort((a,b)=>dn(a.next)-dn(b.next)),g=[['عقب‌افتاده',A.filter(x=>dn(x.next)<TN)],['امروز',A.filter(x=>dn(x.next)==TN)],['فردا',A.filter(x=>dn(x.next)==TN+1)],['بعدی',A.filter(x=>dn(x.next)>TN+1)]];
+return`<h2>یادآوری هوشمند</h2>${g.map(([n,l])=>`<h3 class="${n=='عقب‌افتاده'?'red':''}">${n} (${fa(l.length)})</h3>${l.map(x=>rcard(x)).join('')||'<small>موردی نیست</small>'}`).join('')}`}
+function set(){return`<h2>تنظیمات</h2><div class=card><b>متن‌های پیامک یادآوری</b> (هر خط یک متن؛ هر بار یکی به‌نوبت استفاده می‌شود)<br><small>{owner} {pet} {kind} {date}</small><textarea id=tpl style="min-height:200px">${esc(db.tpl.join('\n'))}</textarea><button class=p onclick="db.tpl=$('#tpl').value.split('\n').filter(x=>x.trim());save();alert('ذخیره شد')">ذخیره متن‌ها</button></div>
+<div class=card><b>پشتیبان‌گیری</b><br><button class=s onclick="bk()">دریافت فایل پشتیبان</button><input type=file accept=.json onchange="rs(this)"></div>`}
+function bk(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(db)]));a.download='clinic-backup-'+TJ.replace(/\//g,'-')+'.json';a.click()}
+function rs(i){const f=i.files[0];if(!f)return;f.text().then(t=>{db=Object.assign(db,JSON.parse(t));save();go('home')})}
+function del(id){if(confirm('حذف شود؟')){db.r=db.r.filter(x=>x.id!=id);save();r()}}
+function delp(id){if(confirm('کل پرونده و سوابق حذف شود؟')){db.p=db.p.filter(x=>x.id!=id);db.r=db.r.filter(x=>x.pid!=id);save();go('pets')}}
+function done(id){db.r.find(x=>x.id==id).done=1;save();r()}
+function tel(pid){location.href='tel:'+en(oOf(pOf(pid)).phone)}
+function sms(id){const x=db.r.find(y=>y.id==id),p=pOf(x.pid),o=oOf(p),k=x.kind||T[x.t].n,t=(db.tpl[db.ti++%db.tpl.length]||DEF[0]).replace(/{owner}/g,o.name).replace(/{pet}/g,p.name).replace(/{kind}/g,k).replace(/{date}/g,fa(x.next));save();
+$('#md').innerHTML=`<div class=bx><b>پیامک به ${esc(o.name)}</b> ${fa(o.phone||'')}<label>متن (قابل ویرایش)</label><textarea id=sm style="min-height:140px">${esc(t)}</textarea><button class=p onclick="location.href='sms:'+en('${esc(o.phone)}')+'?body='+encodeURIComponent($('#sm').value)">ارسال پیامک</button> <button class=s onclick="tel('${p.id}')">${I('phone',15)} تماس</button> <button class=s onclick="cl()">بستن</button></div>`;$('#md').classList.add('on')}
+const cl=()=>{$('#md').classList.remove('on');r()};
+function dfield(id,v){return`<div class=df><input id=${id} inputmode=numeric placeholder="۱۴۰۵/۰۱/۰۱" value="${esc(v?fa(v):'')}"><button type=button onclick="pick('${id}')">${I('cal',20)}</button></div>`}
+function pick(id){const c=pj($('#'+id).value)||pj(TJ),y0=pj(TJ)[0];const o=(a,s)=>a.map(([v,l])=>`<option value=${v} ${v==s?'selected':''}>${l}</option>`).join('');
+$('#pk').innerHTML=`<div class=bx><b>انتخاب تاریخ شمسی</b><div class=df3><select id=py>${o([...Array(40)].map((_,i)=>[y0-30+i,fa(y0-30+i)]),c[0])}</select><select id=pm>${o(MN.map((n,i)=>[i+1,n]),c[1])}</select><select id=pd>${o([...Array(31)].map((_,i)=>[i+1,fa(i+1)]),c[2])}</select></div><p><button class=p onclick="$('#${id}').value=fa(jf([+$('#py').value,+$('#pm').value,+$('#pd').value]));$('#pk').classList.remove('on')">تایید</button> <button class=s onclick="$('#pk').classList.remove('on')">انصراف</button> <button class=s onclick="$('#${id}').value=fa(TJ);$('#pk').classList.remove('on')">امروز</button></p></div>`;$('#pk').classList.add('on')}
+function normd(id){const v=$('#'+id).value.trim();if(!v)return'';const a=pj(v);if(!a||a[1]>12||a[2]>31){alert('تاریخ نامعتبر است: '+v);throw 0}return jf(a)}
+function img(i,id){const f=i.files[0];if(!f)return;const rd=new FileReader();rd.onload=()=>{const im=new Image();im.onload=()=>{const s=Math.min(1,800/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*s;c.height=im.height*s;c.getContext('2d').drawImage(im,0,0,c.width,c.height);IM[id]=c.toDataURL('image/jpeg',.7);$('#'+id+'_p').src=IM[id]};im.src=rd.result};rd.readAsDataURL(f)}
+const imgf=(id,v)=>{IM[id]=v||'';return`<input type=file accept=image/* onchange="img(this,'${id}')"><img id=${id}_p src="${v||''}" width=100>`};
+function rxrow(i={}){return`<div class=rxr><input placeholder="دارو" value="${esc(i.drug)}"><input placeholder="مقدار" value="${esc(i.dose)}"><input placeholder="روش" value="${esc(i.method)}"><input placeholder="مدت" value="${esc(i.dur)}"></div>`}
+function openRec(t,id,pid){const x=id?db.r.find(y=>y.id==id):{},C=T[t];pid=pid||x.pid;
+$('#md').innerHTML=`<div class=bx><h3>${C.n}</h3><label>حیوان</label><select id=f_pid>${db.p.map(p=>`<option value=${p.id} ${p.id==pid?'selected':''}>${esc(p.name)} (${esc(oOf(p).name)})</option>`).join('')}</select><label>تاریخ</label>${dfield('f_date',x.date||TJ)}
+${C.f.map(([k,l,ty,o])=>`<label>${l}</label>`+(ty=='t'?`<textarea id=f_${k}>${esc(x[k])}</textarea>`:ty=='i'?`<input id=f_${k} value="${esc(x[k])}">`:ty=='s'?`<select id=f_${k}>${o.map(v=>`<option ${v==x[k]?'selected':''}>${v}</option>`).join('')}</select>`:ty=='d'?dfield('f_'+k,x[k]):ty=='img'?imgf('f_'+k,x[k]):`<div id=rxl>${(x.items&&x.items.length?x.items:[{}]).map(rxrow).join('')}</div><button type=button class=s onclick="$('#rxl').insertAdjacentHTML('beforeend',rxrow())">+ قلم دارویی</button>`)).join('')}
+<p><button class=p onclick="fsave('${t}','${id||''}')">ذخیره</button> <button class=s onclick="cl()">انصراف</button></p></div>`;$('#md').classList.add('on')}
+function fsave(t,id){if(!db.p.length){alert('ابتدا بیمار ثبت کنید');return}try{const x={id:id||uid(),t,pid:$('#f_pid').value,date:normd('f_date')||TJ};
+T[t].f.forEach(([k,l,ty])=>{x[k]=ty=='d'?normd('f_'+k):ty=='img'?IM['f_'+k]||'':ty=='rx'?[...document.querySelectorAll('#rxl .rxr')].map(r=>{const v=[...r.querySelectorAll('input')].map(i=>i.value);return{drug:v[0],dose:v[1],method:v[2],dur:v[3]}}).filter(i=>i.drug):$('#f_'+k).value});
+if(id){const i=db.r.findIndex(y=>y.id==id);if(db.r[i].next!=x.next)x.done=0;else x.done=db.r[i].done;db.r[i]=x}else db.r.push(x);save();cl()}catch(e){}}
+function pform(id,oid){const p=id?pOf(id):{},o=id?oOf(p):oid?db.o.find(z=>z.id==oid):{};IM.pf=p.ph||'';
+$('#md').innerHTML=`<div class=bx><h3>${id?'ویرایش':'ثبت'} پرونده</h3><label>نام صاحب حیوان</label><input id=o_n value="${esc(o.name)}"><label>شماره تلفن</label><input id=o_p inputmode=tel value="${esc(o.phone)}">
+<label>نام حیوان</label><input id=p_n value="${esc(p.name)}"><label>گونه</label><select id=p_s>${SP.map(s=>`<option ${s==p.sp?'selected':''}>${s}</option>`).join('')}</select><label>نژاد</label><input id=p_b value="${esc(p.breed)}"><label>جنس</label><select id=p_x>${['نر','ماده','نر عقیم‌شده','ماده عقیم‌شده'].map(s=>`<option ${s==p.sex?'selected':''}>${s}</option>`).join('')}</select>
+<label>تاریخ تولد (سن خودکار محاسبه می‌شود)</label>${dfield('p_d',p.birth)}<label>وزن</label><div class=df><input id=p_w inputmode=decimal value="${p.w?p.w:''}"><select id=p_u style="width:110px"><option>گرم</option><option>کیلوگرم</option></select></div>
+<label>شماره میکروچیپ</label><input id=p_c value="${esc(p.chip)}"><label>حساسیت دارویی</label><textarea id=p_a>${esc(p.alg)}</textarea><label>بیماری‌های زمینه‌ای</label><textarea id=p_i>${esc(p.dis)}</textarea><label>عکس حیوان</label>${imgf('pf',p.ph)}
+<p><button class=p onclick="psave('${id||''}','${oid||''}')">ذخیره</button> <button class=s onclick="cl()">انصراف</button></p></div>`;$('#md').classList.add('on')}
+function psave(id,oid){try{const n=$('#p_n').value.trim(),on=$('#o_n').value.trim(),ph=en($('#o_p').value).trim();if(!n||!on){alert('نام حیوان و صاحب لازم است');return}
+let w=parseFloat(en($('#p_w').value))||0;if($('#p_u').value=='کیلوگرم')w=Math.round(w*1000);
+let o=db.o.find(z=>z.id==oid)||db.o.find(z=>ph&&z.phone==ph&&z.name==on);const old=id?pOf(id):null;if(id&&!oid)o=oOf(old);if(!o){o={id:uid()};db.o.push(o)}o.name=on;o.phone=ph;
+const p=Object.assign(old||{id:uid()},{oid:o.id,name:n,sp:$('#p_s').value,breed:$('#p_b').value,sex:$('#p_x').value,birth:normd('p_d'),w,chip:en($('#p_c').value),alg:$('#p_a').value,dis:$('#p_i').value,ph:IM.pf});
+if(!id)db.p.push(p);save();$('#md').classList.remove('on');go('pet',{id:p.id})}catch(e){}}
+r();if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');
+</script></body></html>
